@@ -11,19 +11,48 @@ namespace Alura.Loja.Testes.ConsoleApp
         static void Main(string[] args)
         {
             //GravarUsandoAdoNet();
-            SaveUsingEntity();
+            //SaveUsingEntity();
+            //RecoveryProducts();
+            DeleteProduct();
+
+            Console.ReadKey();
+        }
+
+        private static void DeleteProduct()
+        {
+            using(var context = new StoreContext())
+            {
+                IList<Produto> products = context.Produtos.ToList();
+                foreach(var product in products)
+                {
+
+                }
+            }
+        }
+
+        private static void RecoveryProducts()
+        {
+            using (var context = new StoreContext())
+            {
+                IList<Produto> products = context.Produtos.ToList();
+                foreach (var product in products)
+                {
+                    Console.WriteLine(product.Nome);
+                }
+            }
         }
 
         private static void SaveUsingEntity()
         {
             Produto p = new Produto();
-            p.Nome = "Harry Potter e a Ordem da Fênix";
-            p.Categoria = "Livros";
-            p.Preco = 19.89;
+            p.Nome = "Laranja Mecânica";
+            p.Categoria = "Filmes";
+            p.Preco = 89.95;
 
             using (var context = new StoreContext())
             {
-                context.Adicionar(p);
+                context.Add(p);
+                context.SaveChanges();
             }
         }
 
