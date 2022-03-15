@@ -14,27 +14,47 @@ namespace Alura.Loja.Testes.ConsoleApp
             //SaveUsingEntity();
             //RecoveryProducts();
             DeleteProduct();
+            //RecoveryProducts();
+            //UpdateProducts();
 
             Console.ReadKey();
         }
 
+        private static void UpdateProducts()
+        {
+            //inclui um produto
+            SaveUsingEntity();
+            RecoveryProducts();
+
+            //atualiza produto
+            using(var context = new ProductDAOEntity())
+            {
+                Produto first = context.Products().First();
+                first.Nome = "Laranja Mecânica (1971)";
+                context.Update(first);
+            }
+            RecoveryProducts();
+        }
+
         private static void DeleteProduct()
         {
-            using(var context = new StoreContext())
+            using(var context = new ProductDAOEntity())
             {
-                IList<Produto> products = context.Produtos.ToList();
-                foreach(var product in products)
+                IList<Produto> products = context.Products().ToList();
+                Console.WriteLine($"Foram encontrados {products.Count} produto(s) após a exclusão");
+                foreach (var product in products)
                 {
-
+                    context.Delete(product);
                 }
             }
         }
 
         private static void RecoveryProducts()
         {
-            using (var context = new StoreContext())
+            using (var context = new ProductDAOEntity())
             {
-                IList<Produto> products = context.Produtos.ToList();
+                IList<Produto> products = context.Products().ToList();
+                Console.WriteLine($"Foram encontrados {products.Count} produto(s)");
                 foreach (var product in products)
                 {
                     Console.WriteLine(product.Nome);
@@ -49,10 +69,9 @@ namespace Alura.Loja.Testes.ConsoleApp
             p.Categoria = "Filmes";
             p.Preco = 89.95;
 
-            using (var context = new StoreContext())
+            using (var context = new ProductDAOEntity())
             {
                 context.Add(p);
-                context.SaveChanges();
             }
         }
 
@@ -65,7 +84,7 @@ namespace Alura.Loja.Testes.ConsoleApp
 
             using (var repo = new ProdutoDAO())
             {
-                repo.Adicionar(p);
+                repo.Add(p);
             }
         }
     }
