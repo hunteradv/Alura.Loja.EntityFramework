@@ -1,4 +1,5 @@
 ﻿using Alura.Loja.Testes.ConsoleApp;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -21,38 +22,31 @@ namespace Alura.Loja.Testes.Aula3.ConsoleApp
                 loggerFactory.AddProvider(SqlLoggerProvider.Create());
 
                 var products = context.Produtos.ToList();
-                foreach (var product in products)
-                {
-                    Console.WriteLine(product);
-                }
+                ShowEntries(context.ChangeTracker.Entries());
 
-                Console.WriteLine("==================================");
-                foreach (var entrie in context.ChangeTracker.Entries())
+                var newProduct = new Produto()
                 {
-                    Console.WriteLine(entrie.State);
-                }
+                    Nome = "Jojo Rabbit",
+                    Categoria = "Filmes",
+                    Preco = 2.99
+                };
+                context.Produtos.Add(newProduct);
 
-                var firstProduct = products.Last();
-                firstProduct.Nome = "Pulp Fiction";
-
-                Console.WriteLine("==================================");
-                foreach (var entrie in context.ChangeTracker.Entries())
-                {
-                    Console.WriteLine(entrie.State);
-                }
+                ShowEntries(context.ChangeTracker.Entries());
 
                 context.SaveChanges();
-
-                //Console.WriteLine("===================");
-                //products = context.Produtos.ToList();
-                //foreach (var product in products)
-                //{
-                //    Console.WriteLine(product);
-                //}
-
             }
 
             Console.ReadKey();
+        }
+
+        private static void ShowEntries(IEnumerable<EntityEntry> entries)
+        {
+            Console.WriteLine("==================================");
+            foreach (var entrie in entries)
+            {
+                Console.WriteLine(entrie.Entity.ToString() + " - " + entrie.State);
+            }
         }
     }
 }

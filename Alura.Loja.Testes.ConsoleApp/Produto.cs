@@ -9,7 +9,7 @@
 
         public override string ToString()
         {
-            return "Produto: " + Nome;
+            return $"Produto: {Id, -10}\t{Nome,-20}\t{Categoria,-10}\t{Preco}";
         }
     }
 }
