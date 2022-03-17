@@ -13,9 +13,9 @@ namespace Alura.Loja.Testes.ConsoleApp
             //GravarUsandoAdoNet();
             //SaveUsingEntity();
             //RecoveryProducts();
-            DeleteProduct();
+            //DeleteProduct();
             //RecoveryProducts();
-            //UpdateProducts();
+            UpdateProducts();
 
             Console.ReadKey();
         }
@@ -41,7 +41,6 @@ namespace Alura.Loja.Testes.ConsoleApp
             using(var context = new ProductDAOEntity())
             {
                 IList<Produto> products = context.Products().ToList();
-                Console.WriteLine($"Foram encontrados {products.Count} produto(s) após a exclusão");
                 foreach (var product in products)
                 {
                     context.Delete(product);

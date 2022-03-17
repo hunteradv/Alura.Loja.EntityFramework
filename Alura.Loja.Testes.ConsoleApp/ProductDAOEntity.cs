@@ -23,7 +23,7 @@ namespace Alura.Loja.Testes.ConsoleApp
 
         public void Delete(Produto produto)
         {
-            context.Produtos.Update(produto);
+            context.Produtos.Remove(produto);
             context.SaveChanges();
         }
 
@@ -39,7 +39,7 @@ namespace Alura.Loja.Testes.ConsoleApp
 
         public void Update(Produto produto)
         {
-            context.Produtos.Remove(produto);
+            context.Produtos.Update(produto);
             context.SaveChanges();
         }
     }

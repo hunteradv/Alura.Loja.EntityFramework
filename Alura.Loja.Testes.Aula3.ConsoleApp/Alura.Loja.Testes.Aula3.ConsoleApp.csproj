@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D59A32D0-B933-45D7-8922-483BF3C08524}</ProjectGuid>
+    <ProjectGuid>{35B6DA90-C252-447D-BC56-9942F4AF0C1D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Alura.Loja.Testes.ConsoleApp</RootNamespace>
-    <AssemblyName>Alura.Loja.Testes.ConsoleApp</AssemblyName>
+    <RootNamespace>Alura.Loja.Testes.Aula3.ConsoleApp</RootNamespace>
+    <AssemblyName>Alura.Loja.Testes.Aula3.ConsoleApp</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -37,9 +38,6 @@
     </Reference>
     <Reference Include="Microsoft.EntityFrameworkCore.Relational, Version=1.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.EntityFrameworkCore.Relational.1.1.0\lib\net451\Microsoft.EntityFrameworkCore.Relational.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.EntityFrameworkCore.SqlServer, Version=1.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.EntityFrameworkCore.SqlServer.1.1.0\lib\net451\Microsoft.EntityFrameworkCore.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=1.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Caching.Abstractions.1.1.0\lib\netstandard1.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
@@ -142,21 +140,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IProductDAO.cs" />
-    <Compile Include="ProductDAOEntity.cs" />
-    <Compile Include="Produto.cs" />
-    <Compile Include="ProdutoDAO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SqlLoggerProvider.cs" />
-    <Compile Include="StoreContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ddl-produtos.txt" />
+    <ProjectReference Include="..\Alura.Loja.Testes.ConsoleApp\Alura.Loja.Testes.ConsoleApp.csproj">
+      <Project>{D59A32D0-B933-45D7-8922-483BF3C08524}</Project>
+      <Name>Alura.Loja.Testes.ConsoleApp</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
