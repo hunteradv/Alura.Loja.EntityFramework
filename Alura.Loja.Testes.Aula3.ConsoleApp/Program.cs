@@ -17,24 +17,35 @@ namespace Alura.Loja.Testes.Aula3.ConsoleApp
         {
             using (var context = new StoreContext())
             {
+                //Log
                 var serviceProvider = context.GetInfrastructure<IServiceProvider>();
                 var loggerFactory = serviceProvider.GetService<ILoggerFactory>();
                 loggerFactory.AddProvider(SqlLoggerProvider.Create());
 
+                //select de produtos
                 var products = context.Produtos.ToList();
+
                 ShowEntries(context.ChangeTracker.Entries());
 
                 var newProduct = new Produto()
                 {
-                    Nome = "Jojo Rabbit",
+                    Nome = "Field Of Dreams",
                     Categoria = "Filmes",
-                    Preco = 2.99
+                    Preco = 20.99
                 };
                 context.Produtos.Add(newProduct);
 
                 ShowEntries(context.ChangeTracker.Entries());
 
-                context.SaveChanges();
+                context.Remove(newProduct);;
+                 
+                ShowEntries(context.ChangeTracker.Entries());
+
+                //context.SaveChanges();
+
+                var entry = context.Entry(newProduct);
+
+                Console.Write("\n\n" + entry.Entity.ToString() + " - " + entry.State);
             }
 
             Console.ReadKey();
