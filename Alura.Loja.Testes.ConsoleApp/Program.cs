@@ -30,7 +30,7 @@ namespace Alura.Loja.Testes.ConsoleApp
             using(var context = new ProductDAOEntity())
             {
                 Produto first = context.Products().First();
-                first.Nome = "Laranja Mecânica (1971)";
+                first.Name = "Laranja Mecânica (1971)";
                 context.Update(first);
             }
             RecoveryProducts();
@@ -56,7 +56,7 @@ namespace Alura.Loja.Testes.ConsoleApp
                 Console.WriteLine($"Foram encontrados {products.Count} produto(s)");
                 foreach (var product in products)
                 {
-                    Console.WriteLine(product.Nome);
+                    Console.WriteLine(product.Name);
                 }
             }
         }
@@ -64,9 +64,9 @@ namespace Alura.Loja.Testes.ConsoleApp
         private static void SaveUsingEntity()
         {
             Produto p = new Produto();
-            p.Nome = "Laranja Mecânica";
-            p.Categoria = "Filmes";
-            p.Preco = 89.95;
+            p.Name = "Laranja Mecânica";
+            p.Category = "Filmes";
+            p.UnityValue = 89.95;
 
             using (var context = new ProductDAOEntity())
             {

@@ -8,8 +8,8 @@ using Alura.Loja.Testes.ConsoleApp;
 namespace Alura.Loja.Testes.ConsoleApp.Migrations
 {
     [DbContext(typeof(StoreContext))]
-    [Migration("20220319040408_Unity")]
-    partial class Unity
+    [Migration("20220319041407_AjustProperties")]
+    partial class AjustProperties
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -22,11 +22,13 @@ namespace Alura.Loja.Testes.ConsoleApp.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Categoria");
+                    b.Property<string>("Category");
 
-                    b.Property<string>("Nome");
+                    b.Property<string>("Name");
 
-                    b.Property<double>("Preco");
+                    b.Property<string>("Unity");
+
+                    b.Property<double>("UnityValue");
 
                     b.HasKey("Id");
 

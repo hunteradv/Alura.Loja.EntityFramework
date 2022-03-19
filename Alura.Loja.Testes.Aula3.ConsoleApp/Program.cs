@@ -29,9 +29,9 @@ namespace Alura.Loja.Testes.Aula3.ConsoleApp
 
                 var newProduct = new Produto()
                 {
-                    Nome = "Field Of Dreams",
-                    Categoria = "Filmes",
-                    Preco = 20.99
+                    Name = "Field Of Dreams",
+                    Category = "Filmes",
+                    UnityValue = 20.99
                 };
                 context.Produtos.Add(newProduct);
 

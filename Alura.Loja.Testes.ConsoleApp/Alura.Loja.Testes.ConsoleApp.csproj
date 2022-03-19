@@ -172,9 +172,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IProductDAO.cs" />
-    <Compile Include="Migrations\20220319040408_Unity.cs" />
-    <Compile Include="Migrations\20220319040408_Unity.designer.cs">
-      <DependentUpon>20220319040408_Unity.cs</DependentUpon>
+    <Compile Include="Migrations\20220319040934_Initial.cs" />
+    <Compile Include="Migrations\20220319040934_Initial.designer.cs">
+      <DependentUpon>20220319040934_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20220319041013_Unity.cs" />
+    <Compile Include="Migrations\20220319041013_Unity.designer.cs">
+      <DependentUpon>20220319041013_Unity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20220319041407_AjustProperties.cs" />
+    <Compile Include="Migrations\20220319041407_AjustProperties.designer.cs">
+      <DependentUpon>20220319041407_AjustProperties.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\StoreContextModelSnapshot.cs" />
     <Compile Include="ProductDAOEntity.cs" />
