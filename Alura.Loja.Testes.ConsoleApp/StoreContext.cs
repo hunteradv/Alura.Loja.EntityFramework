@@ -5,7 +5,8 @@ namespace Alura.Loja.Testes.ConsoleApp
 {
     public class StoreContext : DbContext
     {
-        public DbSet<Produto> Produtos { get; set; }
+        public DbSet<Product> Produtos { get; set; }
+        public DbSet<Order> Orders { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

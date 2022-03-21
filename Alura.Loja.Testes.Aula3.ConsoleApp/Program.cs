@@ -27,7 +27,7 @@ namespace Alura.Loja.Testes.Aula3.ConsoleApp
 
                 ShowEntries(context.ChangeTracker.Entries());
 
-                var newProduct = new Produto()
+                var newProduct = new Product()
                 {
                     Name = "Field Of Dreams",
                     Category = "Filmes",

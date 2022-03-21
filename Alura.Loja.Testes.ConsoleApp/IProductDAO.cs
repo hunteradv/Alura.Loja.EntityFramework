@@ -8,9 +8,9 @@ namespace Alura.Loja.Testes.ConsoleApp
 {
     internal interface IProductDAO
     {
-        void Add(Produto produto);
-        void Update(Produto produto);
-        void Delete(Produto produto);
-        IList<Produto> Products();
+        void Add(Product produto);
+        void Update(Product produto);
+        void Delete(Product produto);
+        IList<Product> Products();
     }
 }
