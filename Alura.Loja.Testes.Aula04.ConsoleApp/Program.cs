@@ -1,4 +1,5 @@
 ﻿using Alura.Loja.Testes.ConsoleApp;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -39,10 +40,21 @@ namespace Alura.Loja.Testes.Aula04.ConsoleApp
 
                 context.Orders.Add(order);
 
-                //context.SaveChanges();
+                ShowEntries(context.ChangeTracker.Entries());
+
+                context.SaveChanges();
             }
 
+            
+
             Console.ReadKey();
+        }
+        private static void ShowEntries(IEnumerable<EntityEntry> entries)
+        {
+            foreach (var entrie in entries)
+            {
+                Console.WriteLine(entrie.Entity.ToString() + " - " + entrie.State);
+            }
         }
     }
 }
