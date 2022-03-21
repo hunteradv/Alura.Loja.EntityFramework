@@ -13,5 +13,15 @@ namespace Alura.Loja.Testes.ConsoleApp
         public DateTime StartTime { get; set; }
         public DateTime FinishTime { get; set; }
         public IList<ProductPromotion> Products { get; set; }
+
+        public Promotion()
+        {
+            Products = new List<ProductPromotion>();
+        }
+
+        public void InsertProduct(Product product)
+        {
+            Products.Add(new ProductPromotion() { Product = product });
+        }
     }
 }
