@@ -9,7 +9,7 @@ namespace Alura.Loja.Testes.ConsoleApp
         public string Category { get;  set; }
         public double UnityValue { get;  set; }
         public string Unity { get; set; }
-        public IList<Promotion> Promotions { get; set; }
+        public IList<ProductPromotion> Promotions { get; set; }
 
         public override string ToString()
         {

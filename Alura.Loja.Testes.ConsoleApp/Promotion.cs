@@ -12,6 +12,6 @@ namespace Alura.Loja.Testes.ConsoleApp
         public string Description { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime FinishTime { get; set; }
-        public IList<Product> Products { get; set; }
+        public IList<ProductPromotion> Products { get; set; }
     }
 }

@@ -188,10 +188,15 @@
     <Compile Include="Migrations\20220321021718_Order.designer.cs">
       <DependentUpon>20220321021718_Order.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20220321203248_Promotion.cs" />
+    <Compile Include="Migrations\20220321203248_Promotion.designer.cs">
+      <DependentUpon>20220321203248_Promotion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\StoreContextModelSnapshot.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="ProductDAOEntity.cs" />
     <Compile Include="Product.cs" />
+    <Compile Include="ProductPromotion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Promotion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
