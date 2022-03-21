@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alura.Loja.Testes.Aula3.Con
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alura.Loja.Testes.Aula04.ConsoleApp", "Alura.Loja.Testes.Aula04.ConsoleApp\Alura.Loja.Testes.Aula04.ConsoleApp.csproj", "{3CD107F5-5B9D-4C32-91C9-6BC27723BDC6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alura.Loja.Testes.Aula06.ConsoleApp", "Alura.Loja.Testes.Aula06.ConsoleApp\Alura.Loja.Testes.Aula06.ConsoleApp.csproj", "{EDDAA7D6-F5A3-4087-9558-7E57744DE0E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3CD107F5-5B9D-4C32-91C9-6BC27723BDC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CD107F5-5B9D-4C32-91C9-6BC27723BDC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CD107F5-5B9D-4C32-91C9-6BC27723BDC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDDAA7D6-F5A3-4087-9558-7E57744DE0E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDDAA7D6-F5A3-4087-9558-7E57744DE0E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDDAA7D6-F5A3-4087-9558-7E57744DE0E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDDAA7D6-F5A3-4087-9558-7E57744DE0E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

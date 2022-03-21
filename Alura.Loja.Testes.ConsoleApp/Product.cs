@@ -1,4 +1,6 @@
-﻿namespace Alura.Loja.Testes.ConsoleApp
+﻿using System.Collections.Generic;
+
+namespace Alura.Loja.Testes.ConsoleApp
 {
     public class Product
     {
@@ -7,6 +9,7 @@
         public string Category { get;  set; }
         public double UnityValue { get;  set; }
         public string Unity { get; set; }
+        public IList<Promotion> Promotions { get; set; }
 
         public override string ToString()
         {
