@@ -15,7 +15,19 @@ namespace Alura.Loja.Testes.ConsoleApp
             modelBuilder
                 .Entity<ProductPromotion>()
                 .HasKey(pp => new { pp.ProductId, pp.PromotionId });
-            base.OnModelCreating(modelBuilder);
+
+            modelBuilder
+                .Entity<Address>()
+                .ToTable("Addresses");
+
+            modelBuilder
+                .Entity<Address>()
+                .Property<int>("ClientId");
+
+            modelBuilder
+                .Entity<Address>()
+                .HasKey("ClientId");
+            
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

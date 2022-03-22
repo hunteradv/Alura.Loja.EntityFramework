@@ -194,6 +194,10 @@
     <Compile Include="Migrations\20220321203248_Promotion.designer.cs">
       <DependentUpon>20220321203248_Promotion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20220322222514_Client.cs" />
+    <Compile Include="Migrations\20220322222514_Client.designer.cs">
+      <DependentUpon>20220322222514_Client.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\StoreContextModelSnapshot.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="ProductDAOEntity.cs" />

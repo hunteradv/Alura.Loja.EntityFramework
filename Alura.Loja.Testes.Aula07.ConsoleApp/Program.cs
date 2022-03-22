@@ -1,5 +1,8 @@
 ﻿using Alura.Loja.Testes.ConsoleApp;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,18 +15,26 @@ namespace Alura.Loja.Testes.Aula07.ConsoleApp
     {
         static void Main(string[] args)
         {
-            var cli1 = new Client();
-            cli1.Name = "Gustavo";
-            cli1.DeliveryAddress = new Address()
+            var cli1 = new Client
             {
-                Number = 170,
-                Street = "Rua Rue Bennett",
-                District = "Sobrado",
-                City = "São José do Rio Preto"
+                Name = "Gustavo",
+                DeliveryAddress = new Address()
+                {
+                    Number = 170,
+                    Street = "Rua Rue Bennett",
+                    Complement = "Sobrado",
+                    District = "Bairro Euphoria",
+                    City = "São José do Rio Preto"
+                }
             };
 
             using (var context = new StoreContext())
             {
+                //Log
+                var serviceProvider = context.GetInfrastructure<IServiceProvider>();
+                var loggerFactory = serviceProvider.GetService<ILoggerFactory>();
+                loggerFactory.AddProvider(SqlLoggerProvider.Create());
+
                 context.Clients.Add(cli1);
                 context.SaveChanges();
             }

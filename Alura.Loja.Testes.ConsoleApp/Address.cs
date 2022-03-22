@@ -13,5 +13,6 @@ namespace Alura.Loja.Testes.ConsoleApp
         public string Complement { get; set; }
         public string District { get; set; }
         public string City { get; set; }
+        public Client Client { get; set; }
     }
 }
