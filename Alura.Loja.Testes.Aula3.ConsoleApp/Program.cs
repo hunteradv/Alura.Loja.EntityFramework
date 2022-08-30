@@ -23,7 +23,7 @@ namespace Alura.Loja.Testes.Aula3.ConsoleApp
                 loggerFactory.AddProvider(SqlLoggerProvider.Create());
 
                 //select de produtos
-                var products = context.Produtos.ToList();
+                var products = context.Products.ToList();
 
                 ShowEntries(context.ChangeTracker.Entries());
 
@@ -33,7 +33,7 @@ namespace Alura.Loja.Testes.Aula3.ConsoleApp
                     Category = "Filmes",
                     UnitValue = 20.99
                 };
-                context.Produtos.Add(newProduct);
+                context.Products.Add(newProduct);
 
                 ShowEntries(context.ChangeTracker.Entries());
 
