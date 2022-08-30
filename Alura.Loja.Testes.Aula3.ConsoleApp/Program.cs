@@ -31,7 +31,7 @@ namespace Alura.Loja.Testes.Aula3.ConsoleApp
                 {
                     Name = "Field Of Dreams",
                     Category = "Filmes",
-                    UnityValue = 20.99
+                    UnitValue = 20.99
                 };
                 context.Produtos.Add(newProduct);
 

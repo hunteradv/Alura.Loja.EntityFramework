@@ -63,10 +63,12 @@ namespace Alura.Loja.Testes.ConsoleApp
 
         private static void SaveUsingEntity()
         {
-            Product p = new Product();
-            p.Name = "Laranja Mecânica";
-            p.Category = "Filmes";
-            p.UnityValue = 89.95;
+            Product p = new Product
+            {
+                Name = "Laranja Mecânica",
+                Category = "Filmes",
+                UnitValue = 89.95
+            };
 
             using (var context = new ProductDAOEntity())
             {

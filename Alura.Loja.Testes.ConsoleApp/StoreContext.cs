@@ -1,11 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
 
 namespace Alura.Loja.Testes.ConsoleApp
 {
     public class StoreContext : DbContext
     {
-        public DbSet<Product> Produtos { get; set; }
+        public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Promotion> Promotions { get; set; }
         public DbSet<Client> Clients { get; set; }

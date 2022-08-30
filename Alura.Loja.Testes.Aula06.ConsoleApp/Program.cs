@@ -17,7 +17,7 @@ namespace Alura.Loja.Testes.Aula06.ConsoleApp
                 Name = "Ovo simples",
                 Category = "Ovos de pascoa",
                 Unity = "Unidade",
-                UnityValue = 10
+                UnitValue = 10
             };
 
 
@@ -26,7 +26,7 @@ namespace Alura.Loja.Testes.Aula06.ConsoleApp
                 Name = "Ovo Stranger Things",
                 Category = "Ovos de páscoa",
                 Unity = "Unidade",
-                UnityValue = 130.99
+                UnitValue = 130.99
             };
             
             var p3 = new Product()
@@ -34,7 +34,7 @@ namespace Alura.Loja.Testes.Aula06.ConsoleApp
                 Name = "Ovo Nescau",
                 Category = "Ovos de páscoa",
                 Unity = "Unidade",
-                UnityValue = 70.99
+                UnitValue = 70.99
             };
 
             var easterPromotion = new Promotion()

@@ -20,7 +20,7 @@ namespace Alura.Loja.Testes.Aula04.ConsoleApp
             var frenchBread = new Product()
             {
                 Name = "Pão Francês",
-                UnityValue = 0.50,
+                UnitValue = 0.50,
                 Category = "Padaria",
                 Unity = "Unidade"
             };
@@ -29,7 +29,7 @@ namespace Alura.Loja.Testes.Aula04.ConsoleApp
 
             order.Quantity = 6;
             order.Product = frenchBread;
-            order.Total = (int)(frenchBread.UnityValue * order.Quantity);
+            order.Total = (int)(frenchBread.UnitValue * order.Quantity);
 
             using (var context = new StoreContext())
             {
