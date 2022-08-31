@@ -16,7 +16,7 @@ namespace Alura.Loja.Testes.Aula06.ConsoleApp
             {
                 Name = "Ovo simples",
                 Category = "Ovos de pascoa",
-                //Unity = "Unidade",
+                Unity = "Unidade",
                 UnitValue = 10
             };
 
@@ -25,7 +25,7 @@ namespace Alura.Loja.Testes.Aula06.ConsoleApp
             {
                 Name = "Ovo Stranger Things",
                 Category = "Ovos de páscoa",
-                //Unity = "Unidade",
+                Unity = "Unidade",
                 UnitValue = 130.99
             };
 
@@ -33,7 +33,7 @@ namespace Alura.Loja.Testes.Aula06.ConsoleApp
             {
                 Name = "Ovo Nescau",
                 Category = "Ovos de páscoa",
-                //Unity = "Unidade",
+                Unity = "Unidade",
                 UnitValue = 70.99
             };
 
