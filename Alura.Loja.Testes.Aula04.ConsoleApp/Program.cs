@@ -22,13 +22,14 @@ namespace Alura.Loja.Testes.Aula04.ConsoleApp
                 Name = "Pão Francês",
                 UnitValue = 0.50,
                 Category = "Padaria",
-                //Unity = "Unidade"
+                Unity = "Unidade"
             };
 
-            var order = new Order();
-
-            order.Quantity = 6;
-            order.Product = frenchBread;
+            var order = new Order
+            {
+                Quantity = 6,
+                Product = frenchBread
+            };
             order.Total = (int)(frenchBread.UnitValue * order.Quantity);
 
             using (var context = new StoreContext())
@@ -44,9 +45,6 @@ namespace Alura.Loja.Testes.Aula04.ConsoleApp
 
                 context.SaveChanges();
             }
-
-            
-
             Console.ReadKey();
         }
         private static void ShowEntries(IEnumerable<EntityEntry> entries)
