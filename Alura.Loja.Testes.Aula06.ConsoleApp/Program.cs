@@ -16,7 +16,7 @@ namespace Alura.Loja.Testes.Aula06.ConsoleApp
             {
                 Name = "Ovo simples",
                 Category = "Ovos de pascoa",
-                Unity = "Unidade",
+                //Unity = "Unidade",
                 UnitValue = 10
             };
 
@@ -25,15 +25,15 @@ namespace Alura.Loja.Testes.Aula06.ConsoleApp
             {
                 Name = "Ovo Stranger Things",
                 Category = "Ovos de páscoa",
-                Unity = "Unidade",
+                //Unity = "Unidade",
                 UnitValue = 130.99
             };
-            
+
             var p3 = new Product()
             {
                 Name = "Ovo Nescau",
                 Category = "Ovos de páscoa",
-                Unity = "Unidade",
+                //Unity = "Unidade",
                 UnitValue = 70.99
             };
 
@@ -41,7 +41,7 @@ namespace Alura.Loja.Testes.Aula06.ConsoleApp
             {
                 Description = "Páscoa Feliz",
                 StartTime = DateTime.Now,
-                FinishTime = DateTime.Now.AddMonths(1),                
+                FinishTime = DateTime.Now.AddMonths(1),
             };
 
             easterPromotion.InsertProduct(p1);

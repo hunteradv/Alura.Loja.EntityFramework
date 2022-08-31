@@ -8,14 +8,45 @@ using Alura.Loja.Testes.ConsoleApp;
 namespace Alura.Loja.Testes.ConsoleApp.Migrations
 {
     [DbContext(typeof(StoreContext))]
-    [Migration("20220321203248_Promotion")]
-    partial class Promotion
+    [Migration("20220831121251_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.1")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("Alura.Loja.Testes.ConsoleApp.Address", b =>
+                {
+                    b.Property<int>("ClientId");
+
+                    b.Property<string>("City");
+
+                    b.Property<string>("Complement");
+
+                    b.Property<string>("District");
+
+                    b.Property<int>("Number");
+
+                    b.Property<string>("Street");
+
+                    b.HasKey("ClientId");
+
+                    b.ToTable("Addresses");
+                });
+
+            modelBuilder.Entity("Alura.Loja.Testes.ConsoleApp.Client", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Clients");
+                });
 
             modelBuilder.Entity("Alura.Loja.Testes.ConsoleApp.Order", b =>
                 {
@@ -44,13 +75,11 @@ namespace Alura.Loja.Testes.ConsoleApp.Migrations
 
                     b.Property<string>("Name");
 
-                    b.Property<string>("Unity");
-
-                    b.Property<double>("UnityValue");
+                    b.Property<double>("UnitValue");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Produtos");
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("Alura.Loja.Testes.ConsoleApp.ProductPromotion", b =>
@@ -82,6 +111,14 @@ namespace Alura.Loja.Testes.ConsoleApp.Migrations
                     b.ToTable("Promotions");
                 });
 
+            modelBuilder.Entity("Alura.Loja.Testes.ConsoleApp.Address", b =>
+                {
+                    b.HasOne("Alura.Loja.Testes.ConsoleApp.Client", "Client")
+                        .WithOne("DeliveryAddress")
+                        .HasForeignKey("Alura.Loja.Testes.ConsoleApp.Address", "ClientId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("Alura.Loja.Testes.ConsoleApp.Order", b =>
                 {
                     b.HasOne("Alura.Loja.Testes.ConsoleApp.Product", "Product")
@@ -93,7 +130,7 @@ namespace Alura.Loja.Testes.ConsoleApp.Migrations
             modelBuilder.Entity("Alura.Loja.Testes.ConsoleApp.ProductPromotion", b =>
                 {
                     b.HasOne("Alura.Loja.Testes.ConsoleApp.Product", "Product")
-                        .WithMany("Promotions")
+                        .WithMany()
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade);
 

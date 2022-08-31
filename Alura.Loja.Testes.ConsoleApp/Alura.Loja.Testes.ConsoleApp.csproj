@@ -174,25 +174,13 @@
     <Compile Include="Address.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="IProductDAO.cs" />
-    <Compile Include="Migrations\20220319040934_Initial.cs" />
-    <Compile Include="Migrations\20220319040934_Initial.designer.cs">
-      <DependentUpon>20220319040934_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\20220831121251_InitialCreate.cs" />
+    <Compile Include="Migrations\20220831121251_InitialCreate.designer.cs">
+      <DependentUpon>20220831121251_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20220319041013_Unity.cs" />
-    <Compile Include="Migrations\20220319041013_Unity.designer.cs">
-      <DependentUpon>20220319041013_Unity.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20220319041407_AjustProperties.cs" />
-    <Compile Include="Migrations\20220319041407_AjustProperties.designer.cs">
-      <DependentUpon>20220319041407_AjustProperties.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20220321021718_Order.cs" />
-    <Compile Include="Migrations\20220321021718_Order.designer.cs">
-      <DependentUpon>20220321021718_Order.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20220321203248_Promotion.cs" />
-    <Compile Include="Migrations\20220321203248_Promotion.designer.cs">
-      <DependentUpon>20220321203248_Promotion.cs</DependentUpon>
+    <Compile Include="Migrations\20220831121309_Unity.cs" />
+    <Compile Include="Migrations\20220831121309_Unity.designer.cs">
+      <DependentUpon>20220831121309_Unity.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\StoreContextModelSnapshot.cs" />
     <Compile Include="Order.cs" />
@@ -212,5 +200,6 @@
   <ItemGroup>
     <Content Include="ddl-produtos.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -22,7 +22,7 @@ namespace Alura.Loja.Testes.Aula04.ConsoleApp
                 Name = "Pão Francês",
                 UnitValue = 0.50,
                 Category = "Padaria",
-                Unity = "Unidade"
+                //Unity = "Unidade"
             };
 
             var order = new Order();

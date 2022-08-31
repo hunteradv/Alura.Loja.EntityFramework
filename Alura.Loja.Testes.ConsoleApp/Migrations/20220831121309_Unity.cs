@@ -8,14 +8,9 @@ namespace Alura.Loja.Testes.ConsoleApp.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.RenameColumn(
-                name: "Preco",
-                table: "Produtos",
-                newName: "UnityValue");
-
             migrationBuilder.AddColumn<string>(
                 name: "Unity",
-                table: "Produtos",
+                table: "Products",
                 nullable: true);
         }
 
@@ -23,12 +18,7 @@ namespace Alura.Loja.Testes.ConsoleApp.Migrations
         {
             migrationBuilder.DropColumn(
                 name: "Unity",
-                table: "Produtos");
-
-            migrationBuilder.RenameColumn(
-                name: "UnityValue",
-                table: "Produtos",
-                newName: "Preco");
+                table: "Products");
         }
     }
 }
