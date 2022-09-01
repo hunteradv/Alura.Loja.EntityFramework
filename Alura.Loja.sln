@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alura.Loja.Testes.Aula06.Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alura.Loja.Testes.Aula07.ConsoleApp", "Alura.Loja.Testes.Aula07.ConsoleApp\Alura.Loja.Testes.Aula07.ConsoleApp.csproj", "{BFEE8409-D0F0-4188-9C24-D753CB6A104D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alura.Loja.Testes.Aula08", "Alura.Loja.Testes.Aula08\Alura.Loja.Testes.Aula08.csproj", "{BA2D3252-E72D-4C7A-8403-097980BDFED8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{BFEE8409-D0F0-4188-9C24-D753CB6A104D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFEE8409-D0F0-4188-9C24-D753CB6A104D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFEE8409-D0F0-4188-9C24-D753CB6A104D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA2D3252-E72D-4C7A-8403-097980BDFED8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA2D3252-E72D-4C7A-8403-097980BDFED8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA2D3252-E72D-4C7A-8403-097980BDFED8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA2D3252-E72D-4C7A-8403-097980BDFED8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
